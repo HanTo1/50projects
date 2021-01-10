@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+
+  height: 100vh;
+  width: 100vw;
+
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* overflow: hidden; */
+
+  background-color: #f0f0f0;
+}
+
+.container {
+  padding: 50px;
+
+  -webkit-box-shadow: 7px 14px 53px -7px rgba(0, 0, 0, 0.82);
+  -moz-box-shadow: 7px 14px 53px -7px rgba(0, 0, 0, 0.82);
+  box-shadow: 7px 14px 53px -7px rgba(0, 0, 0, 0.82);
+  border-radius: 20px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.faq-container {
+  width: 550px;
+}
+
+.faq {
+  position: relative;
+
+  margin: 10px 0;
+  padding: 20px;
+
+  background-color: transparent;
+
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.faq-toggle {
+  position: absolute;
+  right: 30px;
+  top: 30px;
+
+  background-color: transparent;
+  font-size: 20px;
+
+  border: none;
+  border-radius: 50%;
+  outline: none;
+
+  height: 30px;
+  width: 30px;
+  padding: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.faq-toggle .fa-times {
+  display: none;
+}
+
+.faq-toggle .fa-chevron-down {
+  display: block;
+}
+
+.faq.active .faq-toggle {
+  background-color: #9fa4a8;
+}
+
+.faq.active .faq-toggle .fa-times {
+  color: #fff;
+  display: block;
+}
+
+.faq.active .faq-toggle .fa-chevron-down {
+  display: none;
+}
+
+.faq-text {
+  display: none;
+}
+
+.faq.active .faq-text {
+  display: block;
+}
+
+.faq-container .faq.active {
+  background-color: white;
+
+  overflow: hidden;
+  position: relative;
+}
+
+.faq.active::before,
+.faq.active::after {
+  content: "\f075";
+  font-family: "Font Awesome 5 Free";
+  position: absolute;
+  color: #2ecc71;
+
+  opacity: 0.2;
+  font-size: 70px;
+
+  top: 20px;
+  left: 20px;
+  
+}
+
+.faq.active::after {
+  color: #3498db;
+  left: -20px;
+  top: -10px;
+  transform: scaleX(-1);
+  -moz-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  -ms-transform: scaleX(-1);
+}
