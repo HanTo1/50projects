@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+
+  height: 100vh;
+  width: 100vw;
+
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-image: linear-gradient(
+    to bottom,
+    #eafbff 0%,
+    #eafbff 50%,
+    #5290f9 50%,
+    #5290f9 100%
+  );
+}
+
+nav {
+  width: 80px;
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 20px;
+
+  transition: width 0.6s linear;
+}
+
+nav.active {
+  width: 450px;
+}
+
+nav ul {
+  display: flex;
+  list-style-type: none;
+
+  margin: 0;
+  padding: 0;
+  width: 0;
+
+  transition: width 0.6s linear;
+}
+
+nav.active ul {
+  width: 100%;
+}
+
+nav ul li {
+  list-style: none;
+  margin: 0 15px;
+
+  opacity: 0;
+  transform: rotateY(0deg);
+  transition: transform 0.6s linear, opacity 0.6s linear;
+}
+
+nav.active ul li {
+  opacity: 1;
+  transform: rotateY(360deg);
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: black;
+}
+
+nav .btn {
+  position: relative;
+
+  border: none;
+  outline: none;
+  padding: 0;
+
+  background-color: transparent;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+}
+
+.line {
+  background-color: #5290f9;
+
+  width: 20px;
+  height: 2px;
+
+  position: absolute;
+  top: 10px;
+  left: 5px;
+
+  transition: transform 0.6s linear;
+}
+
+.line.line-2 {
+  top: auto;
+  bottom: 10px;
+}
+
+nav.active .btn .line.line-1 {
+  transform: rotate(-765deg) translateY(5.5px);
+}
+
+nav.active .btn .line.line-2 {
+  transform: rotate(765deg) translateY(-5.5px);
+}
