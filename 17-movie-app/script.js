@@ -1,7 +1,8 @@
 const url =
   "https://api.themoviedb.org/3/discover/movie?api_key=1d858834a0c15f1d728159f406af49b2&page=1";
 const IMG_PATH = "https://image.tmdb.org/t/p/w1280";
-const SEARCH_API = 'https://api.themoviedb.org/3/search/movie?api_key=1d858834a0c15f1d728159f406af49b2c&query="'
+const SEARCH_API =
+  'https://api.themoviedb.org/3/search/movie?api_key=1d858834a0c15f1d728159f406af49b2c&query="';
 
 const main = document.getElementById("main");
 const form = document.getElementById("form");
@@ -10,10 +11,16 @@ const search = document.getElementById("search");
 getMovies(url);
 
 async function getMovies(url) {
-	const res = await fetch(url);
-	const data = await res.json();
-
-	showMovies(data.results);
+  const res = await fetch(url)
+    .then((data) => {
+      console.log("data: ", data);
+      return data.json();
+    })
+    .then((data) => {
+      console.log("data1: ", data);
+      showMovies(data.results);
+    })
+    .catch((error) => console.log(error));
 }
 
 function showMovies(movies) {
@@ -54,16 +61,16 @@ function getClassByRate(vote) {
     return "red";
   }
 }
-form.addEventListener('submit', (e) => {
-    e.preventDefault()
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
 
-    const searchTerm = search.value
+  const searchTerm = search.value;
 
-    if(searchTerm && searchTerm !== '') {
-        getMovies(SEARCH_API + searchTerm)
+  if (searchTerm && searchTerm !== "") {
+    getMovies(SEARCH_API + searchTerm);
 
-        search.value = ''
-    } else {
-        window.location.reload()
-    }
-})
+    search.value = "";
+  } else {
+    window.location.reload();
+  }
+});
