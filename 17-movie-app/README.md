@@ -1,3 +1,11 @@
+# Mini project: Movie App
+
+## Date: 23 - 1 - 2021
+
+### Da hoc duoc:
+- classList.contains: kiem tra co class do ko
+- nextElementSibling: la index tiep theo
+
 - todo:
   - get api, goi lai function showMovies
   - tao showMovies
