@@ -1,0 +1,50 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  height: 100vh;
+}
+
+#canvas {
+
+  border: 2px solid blue;
+}
+
+.tools {
+  width: 700px;
+  height: 50px;
+
+  background-color: burlywood;
+  position: relative;
+
+  display: flex;
+}
+
+.btn {
+  background-color: #fff;
+  border: none;
+
+  height: 40px;
+  width: 40px;
+
+  margin: 5px 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+}
+
+.close {
+  margin-left: auto;
+}
