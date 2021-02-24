@@ -1,1 +1,10 @@
-asdasdasd
+- todo:
+  - goi left,right, container, btnUp, btnDown
+  - dat 1 bien index = 0 ;
+  - set style chieu cao cho left
+  - dat function cho 2 btn
+  - function
+    - goi bien sliderHeight 
+    - khi click up active ++ new active > length thi cho active = 0;
+    - khi click down active -- new active > length thi cho active = length - 1;
+  - set style transform left, right
