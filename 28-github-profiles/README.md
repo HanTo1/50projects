@@ -1,0 +1,13 @@
+- todo:
+  - goi api
+  - tao function card
+  - goi avatar, name, bio, fol 
+  - tao repos
+    - goi id repos
+    - cat ra 5 cai, foreach
+    - tao 1 the a
+    - add class repo
+    - get link
+    - tao 1 tab moi
+    - add name vao
+    - add vao reposEL
