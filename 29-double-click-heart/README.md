@@ -1,0 +1,19 @@
+- todo:
+  - khi click img
+  - goi 2 bien clickTime, timeClick
+  - if (clickTime = 0)
+    - set clickTime = gio hien tai
+  - else 
+    - if (tght - clickTime < 800>)
+        - tao function tao tym
+        - cho clickTime = 0
+    - else clickTime = gio hien tai
+
+  - function tym:
+    - tao the i, add 2 class icon
+    - tao 2 bien set height, width man hinh
+    - tao 2 bien target
+    - slide man hinh - slide target
+    - them vao img
+    - timeCLick + 1;
+    - remove tym
