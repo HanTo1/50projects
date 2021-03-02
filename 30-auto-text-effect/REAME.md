@@ -1,0 +1,10 @@
+- todo: 
+  - dat text
+  - index = 0;
+  - tao 1 function writeText
+  - cat text
+  - index ++;
+  - index > text.length
+  - index = 0;
+  - setTimeout(write,speed)
+  - khi click input tang speed = 300/ e.target 
