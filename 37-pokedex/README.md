@@ -1,0 +1,5 @@
+- todo:
+  - dat soluong: count = 150;
+  - goi tung id, tao function getPokemon 
+  - getPokemon fetch api, tao createPokemonCard
+  - 
